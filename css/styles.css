@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+  margin: 48px 0 0 0; 
+  padding: 0 16px; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: #fcfcfc;
+  color: #3b3b3b;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #8c7338;;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* /===== HEADER =====/ */
+.cabecalho {
+  width: 100%;
+  height: 48px; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px; 
+}
+
+.logo {
+  font-size: 24px; 
+  color: #8c7338;;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.lista {
+  display: flex;
+}
+
+.item {
+  margin: 0 16px; 
+}
+
+.link {
+  font-size: 16px; 
+  color: #202020;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #8c7338;;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle i {
+    font-size: 32px; 
+    color: #3b3b3b;
+    cursor: pointer;
+  }
+}
+
+/*largo */
+@media screen and (min-width: 769px) {
+  .menu {
+    display: flex;
+  }
+
+  .lista {
+    display: flex;
+  }
+
+  .item {
+    margin: 0 16px; 
+  }
+
+  .link {
+    font-size: 16px; 
+    color: #3b3b3b;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .link:hover {
+    color: #8c7338;;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* titulo */
+.inicio {
+  padding: 80px 0; 
+  text-align: center;
+  background-color: #fcfcfc;
+}
+
+.inicio .titulo {
+  font-size: 32px; 
+  color: #000000;
+}
+
+.inicio .fisica {
+  font-size: 24px; 
+  color: #8c7338;;
+  margin-top: 16px; 
+}
+
+/*descricao */
+.section {
+  padding: 48px 0; 
+}
+
+.section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section .container .titulo {
+  font-size: 24px; 
+  color: #8c7338;;
+}
+
+.section .container .titulo-secao {
+  font-size: 20px; 
+  color: #112A46;
+  margin-top: 16px;
+}
+
+.section .container .descricao {
+  font-size: 16px;
+  color: #2b280f;
+  margin-top: 8px; 
+  max-width: 600px;
+}
+
+.section .container .escala {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin-top: 32px; 
+  border-radius: 10px;
+  border: 1px solid #B0BEC5;
+}
+
+/* formulario */
+.container .grupo-formulario {
+  margin-bottom: 16px; 
+}
+
+.container .grupo-formulario label {
+  display: block;
+  font-size: 16px; 
+  color: #8c7338;;
+  margin-bottom: 8px; 
+}
+
+.container .grupo-formulario input,
+.container .grupo-formulario select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px; 
+  color: #3b3b3b;
+  background-color: #F9F9F9;
+  border: 1px solid #B0BEC5;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px 24px; 
+  font-size: 16px; 
+  color: #FFFFFF;
+  background-color: #8c7338;;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px; 
+}
+
+.container .grupo-formulario button:hover {
+  background-color: #6bcbde;
+}
+
+.container .resultadoTempe,
+.container .resultadoDin,
+.container .resultadoCine {
+  font-size: 16px; 
+  color: #112A46;
+  margin-top: 16px;
+}
+
+/* footer */
+.rodape {
+  padding: 32px 0;
+  background-color: #FFFFFF;
+  text-align: center;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.rodape .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rodape .container .conteudo {
+  margin-bottom: 20px;
+}
+
+.rodape .container .conteudo .logo {
+  font-size: 24px; 
+  color: #8c7338;;
+}
+
+.rodape .container .conteudo .descricao {
+  font-size: 26px; 
+  color: black;
+  margin-top: 8px; 
+}
+
+.rodape .container .conteudo .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px; 
+}
+
+.rodape .container .conteudo .social-link {
+  font-size: 20px; 
+  color: black;
+  margin: 0 8px; 
+  transition: color 0.3s;
+}
+
+.rodape .container .conteudo .social-link:hover {
+  color: #8c7338;;
+}
+
+.rodape .copia {
+  font-size: 20px; 
+  color: #B0BEC5;
+  margin-top: 16px; 
+}
+
+
+/*seções */
+.app {
+  background-color: #fcfcfc;
+}
+
+.app .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.massa1,
+.deslo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.massa1 label,
+.deslo label {
+  display: block;
+  font-size: 16px; 
+  color: #8c7338;;
+  margin-bottom: 8px; 
+}
+
+.massa1 input,
+.deslo input {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px; 
+  font-size: 16px; 
+  color: #3b3b3b;
+  background-color: #F9F9F9;
+  border: 1px solid #B0BEC5;
+  border-radius: 5px;
+}
+
+.massa1 button,
+.deslo button {
+  padding: 12px 24px; 
+  font-size: 16px; 
+  color: #FFFFFF;
+  background-color: #8d6e09;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 16px; 
+}
+
+.massa1 button:hover,
+.deslo button:hover {
+  background-color: #b48c08;
+}
+
+.massa1 .resultado,
+.deslo .resultado {
+  font-size: 16px; 
+  color: #8d6e09;
+  margin-top: 16px; 
+}
+
+.container h1{
+  font-size: 25px;
+}
+
+.massa1 h1{
+  font-size: 25px;
+}
+
+.deslo h1{
+  font-size: 25px;
+}
+
+.resultadoTempe {
+  font-size: 20px; 
+  color: #523f02; 
+  background-color: #cab778; 
+  border: 1px solid #b0bec5;
+  border-radius: 5px; 
+  padding: 15px; 
+  margin-top: 20px; 
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-weight: bold; 
+}
+
+.resultadoCine{
+  font-size: 20px; 
+  color: #382b00;
+  background-color: #cab778; 
+  border: 1px solid #b0bec5; 
+  border-radius: 5px; 
+  padding: 15px; 
+  margin-top: 20px; 
+  text-align: center; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-weight: bold; 
+}
+
+.resultadoDin{
+  font-size: 20px; 
+  color: #523f02;
+  background-color: #cab778; 
+  border: 1px solid #b0bec5; 
+  border-radius: 5px; 
+  padding: 15px; 
+  margin-top: 20px; 
+  text-align: center; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-weight: bold; 
+}
+
+.hidden {
+  display: none;
+}
+
+
+

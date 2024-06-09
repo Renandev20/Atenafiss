@@ -1,0 +1,399 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*===== Colors =====*/
+  --first-color: #0e7490;
+  --first-color-light: #6bcbde;
+  --title-color: #112A46;
+  --text-color: #3b3b3b;
+  --text-color-light: #B0BEC5;
+  --input-color: #F9F9F9;
+  --body-color: #fcfcfc;
+  --container-color: #FFFFFF;
+
+ 
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+
+  
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*===== HEADER =====*/
+.cabecalho {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--container-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: var(--h2-font-size);
+  color: #8c7338;;;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.lista {
+  display: flex;
+}
+
+.item {
+  margin: 0 1rem;
+}
+
+.link {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: var(--first-color);
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle i {
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+}
+
+/* Larger screen adjustments */
+@media screen and (min-width: 769px) {
+  .menu {
+    display: flex;
+  }
+
+  .lista {
+    display: flex;
+  }
+
+  .item {
+    margin: 0 1rem;
+  }
+
+  .link {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .link:hover {
+    color: var(--first-color);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Hero section */
+.inicio {
+  padding: 5rem 0;
+  text-align: center;
+  background-color: var(--body-color);
+}
+
+.inicio .titulo {
+  font-size: var(--biggest-font-size);
+  color: var(--first-color);
+}
+
+.inicio .fisica {
+  font-size: var(--h2-font-size);
+  color: var(--text-color-light);
+  margin-top: 1rem;
+}
+
+/* App sections */
+.section {
+  padding: 3rem 0;
+}
+
+.section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section .container .titulo {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+}
+
+.section .container .titulo-secao {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-top: 1rem;
+}
+
+.section .container .descricao {
+  font-size: var(--normal-font-size);
+  color: var(--text-color-light);
+  margin-top: 0.5rem;
+  max-width: 600px;
+}
+
+.section .container .escala {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin-top: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--text-color-light);
+}
+
+/* Form styles */
+.container .grupo-formulario {
+  margin-bottom: 1rem;
+}
+
+.container .grupo-formulario label {
+  display: block;
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.container .grupo-formulario input,
+.container .grupo-formulario select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  background-color: var(--input-color);
+  border: 1px solid var(--text-color-light);
+  border-radius: 5px;
+}
+
+.container .grupo-formulario button {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--normal-font-size);
+  color: var(--container-color);
+  background-color: var(--first-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container .grupo-formulario button:hover {
+  background-color: var(--first-color-light);
+}
+
+.container .resultadoTempe,
+.container .resultadoDin,
+.container .resultadoCine {
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  margin-top: 1rem;
+}
+
+/* Footer styles */
+.rodape {
+  padding: 2rem 0;
+  background-color: var(--container-color);
+  text-align: center;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.rodape .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rodape .container .conteudo {
+  margin-bottom: 1rem;
+}
+
+.rodape .container .conteudo . {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+}
+
+.rodape .container .conteudo .descricao {
+  font-size: var(--normal-font-size);
+  color: var(--text-color-light);
+  margin-top: 0.5rem;
+}
+
+.rodape .container .conteudo .social {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+.rodape .container .conteudo .social i {
+  font-size: var(--h3-font-size);
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.rodape .container .conteudo .social i:hover {
+  color: var(--first-color);
+}
+
+.rodape .copia {
+  font-size: var(--small-font-size);
+  color: black;
+  margin-top: 1rem;
+}
+
+
+.app {
+  background-color: var(--body-color);
+}
+
+.app .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.massa1,
+.deslo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.massa1 label,
+.deslo label {
+  display: block;
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.massa1 input,
+.deslo input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  background-color: var(--input-color);
+  border: 1px solid var(--text-color-light);
+  border-radius: 5px;
+}
+
+.massa1 button,
+.deslo button {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--normal-font-size);
+  color: var(--container-color);
+  background-color: var(--first-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.massa1 button:hover,
+.deslo button:hover {
+  background-color: var(--first-color-light);
+}
+
+.massa1 .resultado,
+.deslo .resultado {
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  margin-top: 1rem;
+}

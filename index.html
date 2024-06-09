@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js"></script>
+  <link rel="shortcut icon" href="4793339.png" type="image/x-icon">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>Atena Calc</title>
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header class="cabecalho" id="cabecalho">
+    <nav class="container">
+      <a href="/" class="logo">
+        <b></b><span><br>Atena Calc</span></b>
+      </a>
+      <div class="menu" id="menu">
+        <ul class="lista">
+          <li class="item"><a href="#inicio" class="link">Início</a></li>
+          <li class="item"><a href="#sobre" class="link">Termologia</a></li>
+          <li class="item"><a href="#servicos" class="link">Dinâmica</a></li>
+          <li class="item"><a href="#alimentos" class="link">Cinemática</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="principal">
+    <!-- INÍCIO -->
+    <section class="inicio" id="inicio">
+      <div class="container-inicio">
+        <div class="dados-inicio">
+          <h1 class="titulo">FÍSICA</h1>
+          <h2 class="fisica">Cálculos de física na palma da mão</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Termologia -->
+
+    <section class="app section container-app" id="sobre"> 
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="titulo">Termologia</span>
+          <h2 class="titulo-secao inicial">Escalas termométricas</h2>
+          <p class="descricao">
+            Estuda como o calor e a temperatura influenciam os sistemas físicos,
+            investigando fenômenos como expansão térmica e transferência de calor.
+            As principais escalas termométricas são Kelvin, Celsius e Fahrenheit.
+          </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/zs9tPJGpNNo?si=kNO4IFB3EfQSu6C7" frameborder="0" class="escala"></iframe>
+      </div> 
+
+      <!-- Calculadora -->
+
+    
+      <div class="container" id="calculadoraTermologia"> 
+        <h1>Calculadora de Escalas Termométricas</h1>
+        <div class="grupo-formulario">
+          <label for="temperatura">Temperatura:</label>
+          <input type="number" id="temperatura" placeholder="Insira a temperatura">
+        </div>
+        <div class="grupo-formulario">
+          <label for="deEscala">De:</label>
+          <select id="deEscala">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+        <div class="grupo-formulario">
+          <label for="paraEscala">Para:</label>
+          <select id="paraEscala">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+        </div>
+        <button onclick="converterTemperatura()">Calcular</button>
+        <div class="resultadoTempe hidden" id="resultadoTemp"></div>
+      </div>
+    </section>
+
+    <!-- Dinâmica -->
+
+    <section class="app section container-app" id="servicos">
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="titulo">Dinâmica</span>
+          <h2 class="titulo-secao inicial">Força resultante</h2>
+          <p class="descricao">
+            A força resultante equivale a todas as forças que atuam em um corpo,
+            tanto em intensidade quanto em direção e sentido. Ela é uma ação imaginária
+            que substitui todas as outras forças, produzindo o mesmo efeito.
+            A seguir temos um cálculo para força. 
+          </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/TSK8S3vLVk0" frameborder="0" class="escala"></iframe>
+      </div> 
+
+      <!-- Calculadora -->
+
+    <section class="massa1">
+      <h1>Calculadora de Força</h1>
+      <label for="massa">Massa (kg):</label>
+      <input type="number" id="massa" placeholder="Insira a massa"><br><br>
+      <label for="aceleracao">Aceleração (m/s²):</label>
+      <input type="number" id="aceleracao" placeholder="Insira a aceleração"><br><br>
+      <button onclick="calcularForca()">Calcular</button><br><br>
+      <div class="resultadoDin hidden" id="resultadoDin"></div>
+    </section>
+
+    <!-- Cinemática  -->
+
+    <section class="app section container-app" id="alimentos"> 
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="titulo">Cinemática</span>
+          <h2 class="titulo-secao inicial">Velocidade média</h2>
+          <p class="descricao">
+            Na área de Mecânica da Física, a Cinemática estuda e descreve o movimento dos corpos
+            sem se preocupar com as causas do deslocamento.
+            Através da Cinemática é possível classificar e comparar os
+            movimentos, já o motivo da ocorrência é abordado na Dinâmica.
+          </p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/wlTa_yTElGM" frameborder="0" class="escala"></iframe>
+      </div> 
+
+      <!-- Calculadora -->
+
+    <section class="deslo">
+      <h1>Calculadora de deslocamento</h1>
+      <label for="deslocamento">Deslocamento (m):</label>
+      <input type="number" id="deslocamento"placeholder="Insira o deslocamento"><br><br>
+      <label for="tempo">Tempo (s):</label>
+      <input type="number" id="tempo" placeholder="Insira o tempo"><br><br>
+      <button onclick="calcularVelocidadeMedia()">Calcular</button><br><br>
+      <div class="resultadoCine hidden" id="resultadoCine"></div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato section container-contato" id="contato">
+      <div class="container bd-grid">
+        <div class="dados">
+          <span class="subtitulo inicial"></span>
+          <h2 class="titulo inicial">Gostou?</h2>
+          <p class="descricao">Venha conferir nosso Instagram. Iremos trazer mais novidades em breve. Bons estudos!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <!-- RODAPÉ -->
+<footer class="rodape section container-rodape">
+  <div class="container bd-grid">
+    <div class="conteudo">
+      <b class="logo">Atena<span>Calc</span></b>
+      <span class="descricao">O melhor serviço pra você. </span>
+      <div class="social">
+        <a href="https://www.instagram.com/atenacalc_?igsh=MThnMGZiZHU1d2pqeA==" class="social-link" target="_blank"><i class="bx bxl-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <p class="copia">
+    &#169; Feito em 2024, por
+    <a href="https://www.instagram.com/natax0_?igsh=MTIxZW1iYzBiODZneQ==" class="link">Natã,Renan,Vini,Guilherme</a>
+  </p>
+</footer>
+
+</body>
+</html>
